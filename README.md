@@ -12,3 +12,21 @@ This Project is an Airbnb Clone. It's aimed at simulating a real-world applicati
   Focussing on protecting user data, securing APIs, ensuring safe authentication/authorization flows (OAuth, JWT), and defending against common vulnerabilities (like SQL injection, XSS, CSRF)
 ### QA Engineer(Tester)
   Tests the application for bugs, functionality, security vulnerabilities, performance issues, and ensures that the app meets the requirements through manual automated testing.
+
+## Technology Stack
+### Django 
+  A high-level Python web framework used to build the backend, handle business logic, manage users, properties, bookings, and integrate security features.
+### Django REST Framework (DRF)
+  An extension of Django for building powerful and flexible RESTful APIs that allow the frontend or other clients to communicate with the backend easily.
+### PostgreSQL
+  A robust, scalable relational database used to store structured data like user profiles, property listings, bookings, reviews, and transactions.
+### GraphQL 
+  An alternative to traditional REST APIs, enabling clients to request exactly the data they need, improving API performance and flexibility.
+### Celery 
+  A task queue system used for handling asynchronous tasks like sending emails, notifications or processing background jobs( e.g., confirming a booking).
+### Redis
+  An in-memory data store used as a messages broker for Celery and also for caching to speed up API responses and session management.
+### Docker 
+  Containerize the entire application (backend, database, task queues) to ensure consistent development, testing, and production environments.
+### CI/CD Pipelines
+   Automates testing, building, and deploying the project ensuring faster, safer updates and maintaining code quality through continuous integration and delivery practices.

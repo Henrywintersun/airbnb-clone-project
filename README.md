@@ -70,17 +70,17 @@ This Project is an Airbnb Clone. It's aimed at simulating a real-world applicati
 
 ### Entity Relationships
 #### . User <-> Properties:
-      . A user (host) can own multiple properties.
+. A user (host) can own multiple properties.
 #### . User <-> Bookings:
-      . A user (guest) can make multiple bookings. 
+. A user (guest) can make multiple bookings. 
 #### . property <-> Bookings:
-      . A property can have multiple bookings over time.
+. A property can have multiple bookings over time.
 #### . User <-> Reviews:
-      . A user can write multiple reviews for different properties.
+. A user can write multiple reviews for different properties.
 #### . Property <-> Reviews:
-      . A property can have multiple reviews from different users. 
+. A property can have multiple reviews from different users. 
 #### . Booking <-> Payment:
-      . Each booking should have one associated payment.
+. Each booking should have one associated payment.
 
 ## API Security
 To protect the platform, several key security measures are implemented

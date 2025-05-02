@@ -40,7 +40,7 @@ This Project is an Airbnb Clone. It's aimed at simulating a real-world applicati
         . password_hash: Hashed password for authentication
         . is_host: Boolean indicating if the user can list properties
 
-#### 1. Properties
+#### 2. Properties
         . id: Unique identifier
         . owner_id: Foreign key referencing Users
         . title: Property title 
@@ -70,14 +70,42 @@ This Project is an Airbnb Clone. It's aimed at simulating a real-world applicati
 
 ### Entity Relationships
 #### . User <-> Properties:
-      . A user (**host**) can own **multiple properties**.
+      . A user (host) can own multiple properties.
 #### . User <-> Bookings:
-      . A user **(guest)** can make **multiple bookings**. 
+      . A user (guest) can make multiple bookings. 
 #### . property <-> Bookings:
-      . A property can have **multiple bookings** over time.
+      . A property can have multiple bookings over time.
 #### . User <-> Reviews:
-      . A user can write **multiple reviews** for different properties.
+      . A user can write multiple reviews for different properties.
 #### . Property <-> Reviews:
-      . A property can have **multiple reviews** from different users. 
+      . A property can have multiple reviews from different users. 
 #### . Booking <-> Payment:
-      . Each booking should have **one associated payment**.
+      . Each booking should have one associated payment.
+
+## API Security
+To protect the platform, several key security measures are implemented
+### . Authentication: 
+  Users authenticate securely using JWT (JSON Web Tokens) to protect access to private endpoints.
+### . Authorization: 
+  Role-based access control (RBAC) ensures that users can only access or modify resources they own, separating guest, host, and admin privileges. 
+### . Rate Limiting: 
+  API requests are limited per IP to prevent abuse, brute-force attacks, and ensure fair use of system resources. 
+### . Data Validation and Sanitization:
+  All incoming data is validated and sanitized to prevent SQL Injection, Cross-Site Scripting (XSS), and other common vulnerabilities. 
+### . HTTPS Enforcement: 
+  All communications are encrypted over HTTPS to secure sensitive data in transit.
+### . Secure Payment Handling: 
+  Payments are processed via trusted third-party services (e.g., Stripe), ensuring financial transactios are safe without directly storing sensitive payment data.
+
+## CI/CD Pipeline
+CI/CD (Continuous Integration and Continuous Deployment) is the practice of automatically testing, building, and deploying code changes. It ensures that new updates are safely integrated into the project without breaking existing functionality. 
+### Why it's Importants:
+  . Catches bugs early through automated testing. 
+  . Speeds up development and deployment processes. 
+  . Reduces manual errors and ensures consistent delivery. 
+  . Improves the reliability and quality of the application.
+### Tools used:
+  . GitHub Actions: For automating testing, building, and deployment workflows.
+  . Docker: For containerizing the application to ensure consistent environments.
+  . Docker Hub: For storing and managing Docker images.
+  . Cloud Platforms (e.g., AWS, Linode, DigitalOcean): For hosting and running the application.

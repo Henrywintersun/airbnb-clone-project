@@ -1,6 +1,7 @@
 # airbnb-clone-project
 This Project is an Airbnb Clone. It's aimed at simulating a real-world application, An aid in understanding complex architectures, workflows and collaborations, while building and scaling web application. It involves a deep dive into software development, focusing on backend systems, database design, API development, and application security.
 
+
 ## Team Roles
 ### Backend Developer 
   Designs the server-side logic, build APIs, handles database management, ensures authentication/security, and manages data flow between the server and the frontend.
@@ -12,6 +13,7 @@ This Project is an Airbnb Clone. It's aimed at simulating a real-world applicati
   Focussing on protecting user data, securing APIs, ensuring safe authentication/authorization flows (OAuth, JWT), and defending against common vulnerabilities (like SQL injection, XSS, CSRF)
 ### QA Engineer(Tester)
   Tests the application for bugs, functionality, security vulnerabilities, performance issues, and ensures that the app meets the requirements through manual automated testing.
+
 
 ## Technology Stack
 ### Django 
@@ -30,6 +32,7 @@ This Project is an Airbnb Clone. It's aimed at simulating a real-world applicati
   Containerize the entire application (backend, database, task queues) to ensure consistent development, testing, and production environments.
 ### CI/CD Pipelines
    Automates testing, building, and deploying the project ensuring faster, safer updates and maintaining code quality through continuous integration and delivery practices.
+
 
 ## Database Design
 ### Entities and Fields
@@ -81,6 +84,24 @@ This Project is an Airbnb Clone. It's aimed at simulating a real-world applicati
 . A property can have multiple reviews from different users. 
 #### . Booking <-> Payment:
 . Each booking should have one associated payment.
+
+
+## Feature Breakdown 
+### User Management
+Handles user registration, login, authentication, and profile management. It ensures users can securely access and manage their accounts, whether they are guests or hosts.
+### Property Management
+Allows hosts to create, update, and delete property listings with detailed descriptions, pricing, and phostes. This feature forms the core of the platform by enabling the listing of rentable spaces.
+### Booking System
+Enables guests to search for properties, make bookings, and manage reservationis. It handles availability checks, booking confirmations, and ensures a smooth reservation process.
+### Review and Rating System
+Lets users leave reviews and ratings for properties they have stayed at. This promotes transparency, trust, and helps future guests make informed decisions.
+### Payment Integration
+Facilitates secure payment processing for bookings through trusted third-party services (e.g., Stripe or PayPal). It ensures that transactions are seamless and that hosts receive payments efficiently.
+### Search and Filter Functionality 
+Provides users with powerful search and filtering tools (e.g., by location, price, amenities). It enhances user experience by helping guests quickly find properties that match their preferences.
+### Notifications System
+Sends notifications for booking confirmations, payment status updates, and important platform messages. This keeps users informed and engaged throughout their journey.
+
 
 ## API Security
 To protect the platform, several key security measures are implemented

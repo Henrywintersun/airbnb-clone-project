@@ -34,39 +34,39 @@ This Project is an Airbnb Clone. It's aimed at simulating a real-world applicati
 ## Database Design
 ### Entities and Fields
 #### 1. Users 
-        . id: Unique identifier
-        . name: Full name
-        . email: User's email address
-        . password_hash: Hashed password for authentication
-        . is_host: Boolean indicating if the user can list properties
+. id: Unique identifier
+. name: Full name
+. email: User's email address
+. password_hash: Hashed password for authentication
+. is_host: Boolean indicating if the user can list properties
 
 #### 2. Properties
-        . id: Unique identifier
-        . owner_id: Foreign key referencing Users
-        . title: Property title 
-        . description: Detailed description
-        . location: Address or geographic location
+. id: Unique identifier
+. owner_id: Foreign key referencing Users
+. title: Property title 
+. description: Detailed description
+. location: Address or geographic location
 
 #### 3. Booking 
-        . id: unique identifier 
-        . property_id: Foreign key referencing Properties 
-        . user_id: Foreign key referencing Users
-        . start_date: Date booking starts
-        . end_date: Date booking ends
+. id: unique identifier 
+. property_id: Foreign key referencing Properties 
+. user_id: Foreign key referencing Users
+. start_date: Date booking starts
+. end_date: Date booking ends
 
 #### 4. Reviews
-        . id: Unique identifier
-        . property_id: Foreign key referencing Properties
-        . user_id: Foreign key referencing Users
-        . rating: Numerical ratin ( e.g., 1 - 10 )
-        . comment: Optional text feedback
+. id: Unique identifier
+. property_id: Foreign key referencing Properties
+. user_id: Foreign key referencing Users
+. rating: Numerical ratin ( e.g., 1 - 10 )
+. comment: Optional text feedback
 
 #### 5. Payments
-        . id: Unique identifier
-        . user_id: Foreign key referencing Users
-        . booking_id: Foreign key referencing Bookings
-        . amount: Payment amount
-        . payment_status: Status (e.g. pending, completed, failed)
+. id: Unique identifier
+. user_id: Foreign key referencing Users
+. booking_id: Foreign key referencing Bookings
+. amount: Payment amount
+. payment_status: Status (e.g. pending, completed, failed)
 
 ### Entity Relationships
 #### . User <-> Properties:
